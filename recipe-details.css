@@ -1,0 +1,75 @@
+/* General styling for the recipe details section */
+.recipe-details {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles (Ingredients, Instructions) */
+.section-title {
+    font-size: 1.5rem;
+    color: var(--main-color); /* Use the primary color */
+    margin-bottom: 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--secondary-color); /* Underline for emphasis */
+    padding-bottom: 4px;
+}
+
+/* Ensure list items are left-aligned */
+.ingredients-list, .tools-list, .instructions-list {
+    text-align: left; /* Align text to the left */
+    margin: 0 0 16px 20px; /* Indent for bullets or numbers */
+    padding: 0;
+}
+
+.ingredient-item, .instruction-step {
+    text-align: left; /* Ensure individual items are left-aligned */
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Tags styling (if used within the section) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: flex-start; /* Align tags to the left */
+}
+
+.tag {
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Two-column layout for ingredients and tools */
+.ingredients-tools {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 16px; /* Add spacing between columns */
+}
+
+.ingredients-list, .tools-list {
+    flex: 1; /* Each list takes up equal space */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove extra margins */
+    padding: 0;
+    list-style-type: disc; /* Use bullets for lists */
+}
+
+.ingredient-item, .instruction-step {
+    text-align: left; /* Ensure individual items are left-aligned */
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5; /* Improve readability */
+}
