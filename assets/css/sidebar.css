@@ -1,0 +1,74 @@
+/* Sidebar styling */
+.sidebar{
+    width: 150px;
+}
+
+.sidebar-menu {
+    position: sticky; /* Keeps the sidebar fixed within the main section */
+    top: 0;
+    left: 0;
+    width: 50px; /* Docked width */
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: width 0.3s ease; /* Smooth expand/collapse */
+    z-index: 1000;
+    overflow: hidden; /* Hide overflowing text */
+}
+
+.sidebar-menu:hover {
+    width: 150px; /* Expanded width */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.sidebar ul li a i {
+    font-size: 1.5rem; /* Icon size */
+    min-width: 30px; /* Ensure icons are aligned */
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}

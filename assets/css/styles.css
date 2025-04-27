@@ -15,7 +15,6 @@ body {
     padding: 0;
 }
 
-
 a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -39,17 +38,9 @@ button:hover {
     color: var(--main-color);
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
 
-main {
-    width: 50%;
-    margin: 0 auto;
-    padding: 2rem 0;
+.page-heading {
     text-align: center;
-    flex: 1;
+    font-size: 2rem;
+    color: var(--main-color);
 }

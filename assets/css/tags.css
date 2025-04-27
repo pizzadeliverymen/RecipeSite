@@ -1,0 +1,28 @@
+
+.tags-container {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.tags-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 3 equal-width columns */
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.tags-list li {
+text-align: center;
+}
+
+.tags-list a {
+text-decoration: none;
+color: #007BFF;
+font-weight: bold;
+}
+
+.tags-list a:hover {
+text-decoration: none;
+}
