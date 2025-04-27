@@ -1,0 +1,30 @@
+name: Update Base Href and Push to Website Branch
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow when changes are pushed to the main branch
+
+jobs:
+  update-base-href:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Replace <base href="/"> with <base href="/RecipeSite/">
+      run: |
+        find . -name "*.html" -exec sed -i 's|<base href="/">|<base href="/RecipeSite/">|g' {} +
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git checkout -b website
+        git add .
+        git commit -m "Update <base href> for deployment"
+
+    - name: Push changes to website branch
+      run: |
+        git push origin website --force
