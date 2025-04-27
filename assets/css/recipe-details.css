@@ -8,6 +8,24 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+.recipe-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 300px; /* Optional: Limit the maximum height */
+    display: block; /* Center the image if it's inside a block container */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.image-license {
+    font-size: 0.8rem; /* Reduce the font size */
+    color: #666; /* Use a lighter color for less emphasis */
+    margin-top: 8px; /* Add spacing above the text */
+    line-height: 1.4; /* Improve readability */
+}
+
 /* Section titles (Ingredients, Instructions) */
 .section-title {
     font-size: 1.5rem;
@@ -33,29 +51,14 @@
     line-height: 1.5; /* Improve readability */
 }
 
-/* Tags styling (if used within the section) */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-    justify-content: flex-start; /* Align tags to the left */
-}
-
-.tag {
-    background-color: #f0f0f0;
-    color: #555;
-    font-size: 0.8rem;
-    padding: 4px 8px;
-    border-radius: 12px;
-    text-align: center;
-}
 
 /* Two-column layout for ingredients and tools */
 .ingredients-tools {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping if needed */
     gap: 16px; /* Add spacing between columns */
+    margin: 20px; /* Add vertical margin */
+    padding: 10px; /* Add padding inside the container */
 }
 
 .ingredients-list, .tools-list {

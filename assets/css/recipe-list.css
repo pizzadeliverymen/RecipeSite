@@ -30,8 +30,10 @@
 .recipe-item img {
     width: 100%;
     height: auto;
+    max-height: 200px; /* Limit the maximum height */
     border-radius: 8px;
     margin-bottom: 12px;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
 }
 
 .recipe-item h2 {
@@ -44,4 +46,11 @@
     font-size: 0.9rem;
     color: #666;
     margin: 8px 0;
+}
+
+.recipe-item .image-license {
+    font-size: 0.8rem; /* Reduce the font size */
+    color: #666; /* Use a lighter color for less emphasis */
+    margin-top: 8px; /* Add spacing above the text */
+    line-height: 1.4; /* Improve readability */
 }
