@@ -1,6 +1,6 @@
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 250px)); /* Fixed column width */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px)); /* Fixed column width */
     gap: 16px;
     list-style: none;
     padding: 0;

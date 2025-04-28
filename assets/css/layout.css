@@ -22,4 +22,6 @@ html, body {
     max-height: 100%; /* Ensure it fills the height of the main section */
     box-sizing: border-box; /* Include padding in height calculation */
     text-align: center;
+    padding-right: 150px;
 }
+
