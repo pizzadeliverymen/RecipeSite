@@ -16,11 +16,12 @@ html, body {
 /* Content area styling */
 .content {
     flex: 1; /* Take up the remaining space next to the sidebar */
-    max-width: 60%; /* Optional: Limit the maximum width of the content */
     margin: 0 auto; /* Center the content horizontally */
     overflow-y: auto; /* Enable vertical scrolling for the content */
     padding: 20px;
     max-height: 100%; /* Ensure it fills the height of the main section */
     box-sizing: border-box; /* Include padding in height calculation */
     text-align: center;
+    padding-right: 150px;
 }
+
