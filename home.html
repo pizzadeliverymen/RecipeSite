@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Site</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/recipe-list.css">
     <link rel="stylesheet" href="assets/css/footer.css">
@@ -15,6 +16,8 @@
     <script src="https://kit.fontawesome.com/8725ebc5c8.js" crossorigin="anonymous"></script>
 
     <script src="assets/js/load-components.js" defer></script>
+    <script src="assets/js/read-recipes.js" defer></script>
+    <script src="assets/js/fill-recipe-list.js" defer></script>
 </head>
 <body>
     <header></header>
@@ -23,80 +26,6 @@
         <div class="content">
             <h1 class="page-heading">Explore delicious recipes right now!</h1>
             <ul class="recipe-grid">
-                <li class="recipe-item">
-                    <a href="recipes/plain-cake.html">
-                        <img src="assets/images/plain-cake.jpg" alt="Recipe 1">
-                        <h2>Plain Cake</h2>
-                        <p>A very boring plain cake.</p>
-                    </a>
-                    <p class="image-license">Image licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">Attribution-NonCommercial-NoDerivs</a> by <a href="https://www.flickr.com/photos/reid-bee/">Reid Bee</a></p>
-                    <div class="tags">
-                        <a href="tags/vegetarian.html" class="tag">Vegetarian</a>
-                        <a href="tags/dessert.html" class="tag">Dessert</a>
-                    </div>
-                </li>
-                <li class="recipe-item">
-                    <a href="recipes/tonkatsu.html">
-                        <img src="assets/images/tonkatsu.jpg" alt="Recipe 2">
-                        <h2>Tonkatsu</h2>
-                        <p>Because who doesn't love fried food.</p>
-                    </a>
-                    <p class="image-license">Photo by <a href="https://unsplash.com/@milkbox?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ryan Kwok</a> on <a href="https://unsplash.com/photos/brown-pastry-on-stainless-steel-tray-d2RYC06lRV0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-                    <div class="tags">
-                        <a href="tags/fried.html" class="tag">Fried</a>
-                        <a href="tags/japanese.html" class="tag">Japanese</a>
-                    </div>
-                </li>
-                <li class="recipe-item">
-                    <a href="recipes/onigiri.html">
-                        <img src="assets/images/onigiri.jpg" alt="Recipe 1">
-                        <h2>Onigiri</h2>
-                        <p>Rice and Filling, what more could anyone ever need?</p>
-                    </a>
-                    <p class="image-license">Photo by <a href="https://unsplash.com/@themangomonster?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniel Téllez Girón</a> on <a href="https://unsplash.com/photos/a-piece-of-sushi-sitting-on-top-of-a-wooden-cutting-board-ZOINPNtpvGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                    </p>
-                    <div class="tags">
-                        <a href="tags/japanese.html" class="tag">Japanese</a>
-                        <a href="tags/lunch.html" class="tag">Lunch</a>
-                    </div>
-                </li>
-                <li class="recipe-item">
-                    <a href="recipes/plain-cake.html">
-                        <img src="assets/images/plain-cake.jpg" alt="Recipe 1">
-                        <h2>Plain Cake</h2>
-                        <p>A very boring plain cake.</p>
-                    </a>
-                    <p class="image-license">Image licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">Attribution-NonCommercial-NoDerivs</a> by <a href="https://www.flickr.com/photos/reid-bee/">Reid Bee</a></p>
-                    <div class="tags">
-                        <a href="tags/vegetarian.html" class="tag">Vegetarian</a>
-                        <a href="tags/dessert.html" class="tag">Dessert</a>
-                    </div>
-                </li>
-                <li class="recipe-item">
-                    <a href="recipes/tonkatsu.html">
-                        <img src="assets/images/tonkatsu.jpg" alt="Recipe 2">
-                        <h2>Tonkatsu</h2>
-                        <p>Because who doesn't love fried food.</p>
-                    </a>
-                    <p class="image-license">Photo by <a href="https://unsplash.com/@milkbox?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ryan Kwok</a> on <a href="https://unsplash.com/photos/brown-pastry-on-stainless-steel-tray-d2RYC06lRV0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-                    <div class="tags">
-                        <a href="tags/fried.html" class="tag">Fried</a>
-                        <a href="tags/japanese.html" class="tag">Japanese</a>
-                    </div>
-                </li>
-                <li class="recipe-item">
-                    <a href="recipes/onigiri.html">
-                        <img src="assets/images/onigiri.jpg" alt="Recipe 1">
-                        <h2>Onigiri</h2>
-                        <p>Rice and Filling, what more could anyone ever need?</p>
-                    </a>
-                    <p class="image-license">Photo by <a href="https://unsplash.com/@themangomonster?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniel Téllez Girón</a> on <a href="https://unsplash.com/photos/a-piece-of-sushi-sitting-on-top-of-a-wooden-cutting-board-ZOINPNtpvGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                    </p>
-                    <div class="tags">
-                        <a href="tags/japanese.html" class="tag">Japanese</a>
-                        <a href="tags/lunch.html" class="tag">Lunch</a>
-                    </div>
-                </li>
             </ul>
         </div>
     </main>
