@@ -16,7 +16,7 @@
     overflow: hidden; /* Hide overflowing text */
 }
 
-.sidebar-menu:hover {
+.sidebar-menu.expanded {
     width: 150px; /* Expanded width */
 }
 
