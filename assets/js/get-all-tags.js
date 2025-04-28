@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const jsonData = await response.json();
-          console.log(jsonData);
+        //   console.log(jsonData);
           return jsonData; // Optionally return the parsed JSON data
         } catch (error) {
           console.error('Error reading or parsing the JSON file:', error);
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach(recipe => {
             recipe.tags.forEach((tag) => tags.add(tag));   
         });
-        console.log("tags loaded successfully");
+        // console.log("tags loaded successfully");
         const orderedTags = Array.from(tags).sort((a, b) => a.localeCompare(b));
         addTags(orderedTags);
-        console.log("Tags added successfully");
+        // console.log("Tags added successfully");
     }).catch(error => {
         console.error('Error reading or parsing the JSON file:', error);
     });

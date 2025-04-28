@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const recipeTitle = document.querySelector(".recipe-title");
         recipeTitle.textContent = currentRecipe.title;
         const recipeImage = document.querySelector(".recipe-image");
-        console.log(currentRecipe.img)
+        // console.log(currentRecipe.img)
         recipeImage.src = currentRecipe.img;
         recipeImage.alt = currentRecipe.title;
         const recipeDescription = document.querySelector(".recipe-description");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         const ingredientsList = document.querySelector(".ingredients-list");
-        console.log(ingredientsList)
+        // console.log(ingredientsList)
         ingredientsList.innerHTML = `
             <h2 class="section-title">Ingredients</h2>
             ${currentRecipe.ingredients.map(ingredient => `<li class="ingredient-item">${ingredient}</li>`).join("")}
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const jsonData = await response.json();
-          console.log(jsonData);
+        //   console.log(jsonData);
           return jsonData; // Optionally return the parsed JSON data
         } catch (error) {
           console.error('Error reading or parsing the JSON file:', error);
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentRecipe = data.find(recipe => recipe.id === "onigiri");
         }
         addRecipeDetails(currentRecipe);
-        console.log("Recipe loaded successfully");
+        // console.log("Recipe loaded successfully");
     }).catch(error => {
         console.error('Error reading or parsing the JSON file:', error);
     });

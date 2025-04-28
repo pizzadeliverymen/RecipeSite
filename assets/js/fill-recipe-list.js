@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const jsonData = await response.json();
-          console.log(jsonData);
+        //   console.log(jsonData);
           return jsonData; // Optionally return the parsed JSON data
         } catch (error) {
           console.error('Error reading or parsing the JSON file:', error);
@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach(recipe => {
             addRecipeItem(recipe);
         });
-        console.log("Recipes loaded successfully");
+        // console.log("Recipes loaded successfully");
         data.forEach(recipe => {
             addRecipeItem(recipe);
         });
-        console.log("Recipes loaded successfully x2");
+        // console.log("Recipes loaded successfully x2");
     }).catch(error => {
         console.error('Error reading or parsing the JSON file:', error);
     });

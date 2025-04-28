@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const jsonData = await response.json();
-          console.log(jsonData);
+        //   console.log(jsonData);
           return jsonData; // Optionally return the parsed JSON data
         } catch (error) {
           console.error('Error reading or parsing the JSON file:', error);
@@ -41,20 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipes = readJSONFile(filePath);
     const getTagIDFromURL = () => {
         const params = new URLSearchParams(window.location.search);
-        console.log(params.get("id"));
+        // console.log(params.get("id"));
         return params.get("id");
     };
     recipes.then(data => {
         let recipeList = data.filter(recipe => {
-            console.log(recipe.tags)
+            // console.log(recipe.tags)
             return recipe.tags.includes(getTagIDFromURL())
         });
-        console.log(recipeList);
+        // console.log(recipeList);
         recipeList.forEach(element => {
-            console.log(element)
+            // console.log(element)
             addRecipeItem(element);
         });
-        console.log("Recipe loaded successfully");
+        // console.log("Recipe loaded successfully");
     }).catch(error => {
         console.error('Error reading or parsing the JSON file:', error);
     });
