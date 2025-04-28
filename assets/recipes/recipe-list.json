@@ -1,5 +1,6 @@
 [
   {
+    "id": "plain-cake",
     "title": "Plain Cake",
     "description": "This is just a boring plain cake",
     "img": "assets/images/plain-cake.jpg",
@@ -31,6 +32,7 @@
     ]
   },
   {
+    "id": "tonkatsu",
     "title": "Tonkatsu",
     "description": "Because who doesn't love fried food.",
     "img": "assets/images/tonkatsu.jpg",
@@ -68,6 +70,7 @@
     ]
   },
   {
+    "id": "onigiri",
     "title": "Onigiri",
     "description": "Rice and Filling, what more could anyone ever need?",
     "img": "assets/images/onigiri.jpg",

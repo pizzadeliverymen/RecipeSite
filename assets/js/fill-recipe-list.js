@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         recipeItem.classList.add("recipe-item");
 
         recipeItem.innerHTML = `
-            <a href="${recipeLink}">
+            <a href="${"recipes/"+recipeLink+".html"}">
                 <img src="${imageSrc}" alt="${title}">
                 <h2>${title}</h2>
                 <p>${description}</p>
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipes = readJSONFile(filePath);
     recipes.then(data => {
         data.forEach(recipe => {
-            addRecipeItem(recipe.title, recipe.img, recipe.description, recipe.tags, recipe.recipeLink, recipe.imgCredits);
+            addRecipeItem(recipe.title, recipe.img, recipe.description, recipe.tags, recipe.id, recipe.imgCredits);
         });
         console.log("Recipes loaded successfully");
         data.forEach(recipe => {
