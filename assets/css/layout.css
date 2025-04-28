@@ -16,7 +16,6 @@ html, body {
 /* Content area styling */
 .content {
     flex: 1; /* Take up the remaining space next to the sidebar */
-    max-width: 60%; /* Optional: Limit the maximum width of the content */
     margin: 0 auto; /* Center the content horizontally */
     overflow-y: auto; /* Enable vertical scrolling for the content */
     padding: 20px;
