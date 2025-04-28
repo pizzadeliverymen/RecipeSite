@@ -2,19 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipeGrid = document.querySelector(".recipe-grid");
 
     // Function to add a recipe item
-    const addRecipeItem = (title, imageSrc, description, tags, recipeLink, imageLicense) => {
+    const addRecipeItem = (recipe) => {
         const recipeItem = document.createElement("li");
         recipeItem.classList.add("recipe-item");
 
         recipeItem.innerHTML = `
-            <a href="${"recipes/"+recipeLink+".html"}">
-                <img src="${imageSrc}" alt="${title}">
-                <h2>${title}</h2>
-                <p>${description}</p>
+            <a href="${"recipe.html?id="+recipe.id}">
+                <img src="${recipe.img}" alt="${recipe.title}">
+                <h2>${recipe.title}</h2>
+                <p>${recipe.description}</p>
             </a>
-            <p class="image-license">${imageLicense}</p>
+            <p class="image-license">${recipe.imgCredits}</p>
             <div class="tags">
-                ${tags.map(tag => `<a href="tags/${tag.toLowerCase()}.html" class="tag">${tag}</a>`).join("")}
+                ${recipe.tags.map(tag => `<a href="tags/${tag.toLowerCase()}.html" class="tag">${tag}</a>`).join("")}
             </div>
         `;
 
@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipes = readJSONFile(filePath);
     recipes.then(data => {
         data.forEach(recipe => {
-            addRecipeItem(recipe.title, recipe.img, recipe.description, recipe.tags, recipe.id, recipe.imgCredits);
+            addRecipeItem(recipe);
         });
         console.log("Recipes loaded successfully");
         data.forEach(recipe => {
-            addRecipeItem(recipe.title, recipe.img, recipe.description, recipe.tags, recipe.recipeLink, recipe.imgCredits);
+            addRecipeItem(recipe);
         });
         console.log("Recipes loaded successfully x2");
     }).catch(error => {

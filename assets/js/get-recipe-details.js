@@ -69,8 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const filePath = 'assets/recipes/recipe-list.json';
     const currentRecipeID = window.location.pathname.split("/").pop().replace(".html", "");
     const recipes = readJSONFile(filePath);
+
+    const getRecipeIDFromURL = () => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("id");
+    };
     recipes.then(data => {
-        let currentRecipe = data.find(recipe => recipe.id === currentRecipeID);
+        let currentRecipe = data.find(recipe => recipe.id === getRecipeIDFromURL());
         if (!currentRecipe) {
             console.error('Recipe not found, using onigiri');
             currentRecipe = data.find(recipe => recipe.id === "onigiri");
